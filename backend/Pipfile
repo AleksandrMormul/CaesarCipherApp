@@ -15,6 +15,7 @@ autopep8 = "*"
 pylint = "*"
 flake8 = "*"
 psycopg2 = "*"
+pyyaml = "*"
 
 [requires]
 python_version = "3.6"
