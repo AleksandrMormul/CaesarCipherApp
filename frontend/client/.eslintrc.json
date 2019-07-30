@@ -1,0 +1,18 @@
+{
+  "env": {
+      "browser": true,
+      "jest": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+      "no-console": ["error", { "allow": ["warn", "error"] }],
+      "react/no-array-index-key": "off",
+      "prefer-destructuring": ["error", {
+          "array": true,
+          "object": true
+        }, {
+          "enforceForRenamedProperties": false
+        }]
+      }
+}
