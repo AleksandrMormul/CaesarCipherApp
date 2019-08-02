@@ -6,6 +6,7 @@ In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift ciphe
 ## Project structure
 
 - backend/server/ - Django settings
+- backend/caesar_cipher/ - Caesar cipher app
 - frontend/client/ - React application
 - Makefile - commands for launching application or executing some actions
 - README.md - general project documentation
