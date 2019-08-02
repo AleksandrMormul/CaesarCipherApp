@@ -1,4 +1,8 @@
 SHELL := /bin/bash
+
+dep:
+	pipenv install
+
 runEnv:
 	cd backend && pipenv shell cd -
 
