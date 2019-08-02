@@ -1,26 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import './btn.css';
+import CipherForm from './components/CipherForm';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-and save to reload.
-        </p>
+const App = () => (
+  <div className="App">
+    <div className="App-header" />
+    <div className="container">
+      <div className="row">
+        <div className="col-12 col-md-8">Caesar Cipher</div>
       </div>
-    );
-  }
-}
+      <CipherForm />
+    </div>
+  </div>
+);
 
 export default App;
