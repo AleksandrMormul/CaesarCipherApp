@@ -26,22 +26,36 @@ export default class CipherForm extends Component {
     });
   }
 
+  getResult() {
+    setTimeout(() => this.setState({ position: 1 }), 9000);
+    fetch('/api/')
+      .then(response => response.json())
+      .then((apiJson) => {
+        this.setState({ content_decode: apiJson.content_decode });
+      });
+  }
+
+
   render() {
     const v = () => {
       this.onSubmit();
     };
+
+    const res = () => {
+      this.getResult();
+    };
     return (
-      <form onClick={this.onSubmit.bind()}>
+      <form onSubmit={this.onSubmit.bind()}>
         <div className="row">
           <div className="col">
-            <textarea onChange={e => this.setState({ content_decode: e.target.value })} name="content_decode" className="form-control rounded-0 w-75 p-3" id="exampleFormControlTextarea1" rows="10" placeholder="Input text" />
+            <textarea onChange={e => this.setState({ content_encode: e.target.value })} name="content_decode" className="form-control rounded-0 w-75 p-3" id="exampleFormControlTextarea1" rows="10" placeholder="Input text" />
           </div>
           <div className="row">
             <div className="col mx-md-n5">
               <button onClick={v} type="button">Encode</button>
             </div>
             <div className="col mx-md-n5">
-              <button type="button">Decode</button>
+              <button onClick={res} type="button">Result</button>
             </div>
             <div className="col">
               <div className="input-group mb-2 mr-sm-2">
@@ -53,7 +67,7 @@ export default class CipherForm extends Component {
             </div>
           </div>
           <div className="col">
-            <textarea onChange={e => this.setState({ content_encode: e.target.value })} name="content_encode" className="form-control rounded-0 w-75 p-3" id="exampleFormControlTextarea1" rows="10" placeholder="Encoded text" />
+            <textarea value={this.state.content_decode} onChange={e => this.setState({ content_decode: e.target.value })} name="content_decode" className="form-control rounded-0 w-75 p-3" rows="10" placeholder="Encoded text" />
           </div>
         </div>
       </form>

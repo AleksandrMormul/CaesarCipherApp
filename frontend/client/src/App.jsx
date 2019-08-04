@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import './btn.css';
 import CipherForm from './components/CipherForm';
 
 const App = () => (
