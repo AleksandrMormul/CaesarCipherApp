@@ -24,3 +24,13 @@ In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift ciphe
 - `make runEnv` - Run pipenv virtualenv
 - `make server` - Run backend
 - `make client` - Run frontend
+
+
+## HOW TO USE
+
+- Enter the English text in the text field with the placeholder `Input text`.
+- In the `Shift` field, enter the number that will be used to shift the letters
+- Next, click the `Encode` button
+ In order to get the result of the ciphertext, double-click the `Result` button.
+
+To decrypt text, you should follow all the previous points, except that instead of English text, enter ciphertext.
